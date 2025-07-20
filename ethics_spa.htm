@@ -1,0 +1,1743 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-PH style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;en&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;title&gt;Interactive Ethics Course
+Guide&lt;/title&gt;</p>
+
+<p class=MsoNormal>    &lt;script
+src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>    &lt;script
+src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>    &lt;link rel=&quot;preconnect&quot;
+href=&quot;https://fonts.googleapis.com&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;link rel=&quot;preconnect&quot;
+href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;</p>
+
+<p class=MsoNormal>    &lt;link
+href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap&quot;
+rel=&quot;stylesheet&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Chosen Palette: Warm Neutrals --&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Application Structure Plan: The SPA is
+structured into five thematic, non-linear sections accessible via a sticky top
+navigation: &quot;Foundations,&quot; &quot;The Human Act,&quot; &quot;Moral
+Norms,&quot; &quot;Ethical Theories,&quot; and &quot;Application.&quot; This
+design was chosen to break down the dense conceptual information into manageable,
+self-contained modules. It encourages user exploration over passive
+consumption, allowing students to jump to specific topics of interest. Key
+interactions include tabbed content for modifiers of human acts, interactive
+cards for types of conscience and law, and a dynamic view-switcher for comparing
+major ethical theories, which is more engaging than a static list. This
+user-driven approach enhances learning and usability by providing control and
+reducing cognitive load. --&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Visualization &amp; Content Choices: </p>
+
+<p class=MsoNormal>        - Report Info: Branches of Ethics -&gt; Goal:
+Organize -&gt; Viz/Presentation Method: Interactive cards -&gt; Interaction:
+Click to reveal description -&gt; Justification: More engaging than a list,
+encourages active discovery -&gt; Library/Method: HTML/CSS/JS.</p>
+
+<p class=MsoNormal>        - Report Info: Modifiers of Human Acts -&gt; Goal:
+Compare -&gt; Viz/Presentation Method: Tabbed interface -&gt; Interaction:
+Click tab to switch content -&gt; Justification: Organizes complex, related
+info cleanly, saving space and improving clarity -&gt; Library/Method: HTML/CSS/JS.</p>
+
+<p class=MsoNormal>        - Report Info: Ethical Theories (Virtue, Deontology,
+Utilitarianism) -&gt; Goal: Compare/Inform -&gt; Viz/Presentation Method:
+Conceptual Doughnut Chart &amp; Dynamic Text -&gt; Interaction: Click buttons
+to update chart and text -&gt; Justification: Visually represents the core
+focus of each theory (character, duty, consequence) aiding comprehension, while
+dynamic text provides deep-dive info -&gt; Library/Method: Chart.js,
+HTML/CSS/JS.</p>
+
+<p class=MsoNormal>        - Report Info: Ethical Decision-Making Process -&gt;
+Goal: Organize/Inform -&gt; Viz/Presentation Method: Clickable stepper/timeline
+-&gt; Interaction: Click step to view details -&gt; Justification: Breaks down
+a process into digestible steps, making it easier to learn and follow -&gt;
+Library/Method: HTML/CSS/JS.</p>
+
+<p class=MsoNormal>        - Report Info: Ethical Dilemma Solver (NEW) -&gt;
+Goal: Apply/Interact -&gt; Viz/Presentation Method: Text input, dropdown,
+button, text output -&gt; Interaction: User inputs dilemma, selects theory,
+clicks button to get LLM analysis -&gt; Justification: Provides a practical
+application of ethical theories, enhancing active learning and problem-solving
+skills -&gt; Library/Method: Gemini API (gemini-2.0-flash), HTML/CSS/JS.</p>
+
+<p class=MsoNormal>        - Report Info: Ethical Concept Explainer (NEW) -&gt;
+Goal: Inform/Clarify -&gt; Viz/Presentation Method: Text input, button, text
+output -&gt; Interaction: User inputs concept, clicks button to get LLM
+explanation -&gt; Justification: Offers on-demand clarification of abstract
+concepts, supporting self-paced learning -&gt; Library/Method: Gemini API
+(gemini-2.0-flash), HTML/CSS/JS.</p>
+
+<p class=MsoNormal>    --&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- CONFIRMATION: NO SVG graphics used. NO Mermaid
+JS used. --&gt;</p>
+
+<p class=MsoNormal>    &lt;style&gt;</p>
+
+<p class=MsoNormal>        body {</p>
+
+<p class=MsoNormal>            font-family: 'Inter', sans-serif;</p>
+
+<p class=MsoNormal>            background-color: #FDFBF5; /* A very light, warm
+beige */</p>
+
+<p class=MsoNormal>            color: #3D405B; /* A muted dark blue-gray */</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .nav-button {</p>
+
+<p class=MsoNormal>            transition: all 0.3s ease;</p>
+
+<p class=MsoNormal>            color: #816C61; /* Muted brown for text */</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .nav-button.active, .nav-button:hover {</p>
+
+<p class=MsoNormal>            color: #E07A5F; /* A soft, earthy terracotta for
+highlights */</p>
+
+<p class=MsoNormal>            border-bottom-color: #E07A5F;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .card {</p>
+
+<p class=MsoNormal>            background-color: #FFFFFF;</p>
+
+<p class=MsoNormal>            border: 1px solid #E4E2DD;</p>
+
+<p class=MsoNormal>            transition: all 0.3s ease;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .card:hover {</p>
+
+<p class=MsoNormal>            transform: translateY(-5px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 10px 15px -3px rgba(0, 0, 0,
+0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-primary {</p>
+
+<p class=MsoNormal>            background-color: #81B29A; /* A calm, muted
+green */</p>
+
+<p class=MsoNormal>            color: #FFFFFF;</p>
+
+<p class=MsoNormal>            transition: background-color 0.3s ease;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .btn-primary:hover {</p>
+
+<p class=MsoNormal>            background-color: #6A9C89;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .tab-button.active {</p>
+
+<p class=MsoNormal>            background-color: #E07A5F;</p>
+
+<p class=MsoNormal>            color: #FFFFFF;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .content-section {</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .content-section.active {</p>
+
+<p class=MsoNormal>            display: block;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        .chart-container {</p>
+
+<p class=MsoNormal>            position: relative;</p>
+
+<p class=MsoNormal>            margin: auto;</p>
+
+<p class=MsoNormal>            height: 30vh;</p>
+
+<p class=MsoNormal>            width: 60vw;</p>
+
+<p class=MsoNormal>            max-width: 300px;</p>
+
+<p class=MsoNormal>            max-height: 300px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>        @media (min-width: 768px) {</p>
+
+<p class=MsoNormal>            .chart-container {</p>
+
+<p class=MsoNormal>                height: 350px;</p>
+
+<p class=MsoNormal>                width: 350px;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body class=&quot;antialiased&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Header &amp; Navigation --&gt;</p>
+
+<p class=MsoNormal>    &lt;header class=&quot;bg-white/80 backdrop-blur-lg
+sticky top-0 z-50 shadow-sm&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;nav class=&quot;container mx-auto px-4 sm:px-6
+lg:px-8&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;flex items-center
+justify-between h-16&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;flex-shrink-0&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h1 class=&quot;text-xl
+font-bold&quot; style=&quot;color: #3D405B;&quot;&gt;Ethics Explorer&lt;/h1&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;hidden
+md:block&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;ml-10 flex
+items-baseline space-x-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;nav-button
+px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent&quot;
+data-target=&quot;foundations&quot;&gt;Foundations&lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;nav-button
+px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent&quot;
+data-target=&quot;human-act&quot;&gt;The Human Act&lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;nav-button
+px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent&quot;
+data-target=&quot;moral-norms&quot;&gt;Moral Norms&lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;nav-button
+px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent&quot;
+data-target=&quot;theories&quot;&gt;Ethical Theories&lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;nav-button
+px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent&quot;
+data-target=&quot;application&quot;&gt;Application&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                 &lt;div class=&quot;md:hidden&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;select id=&quot;mobile-nav&quot;
+class=&quot;block w-full pl-3 pr-10 py-2 text-base border-gray-300
+focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
+rounded-md&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;foundations&quot;&gt;Foundations&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;human-act&quot;&gt;The Human Act&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;moral-norms&quot;&gt;Moral Norms&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;theories&quot;&gt;Ethical Theories&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;application&quot;&gt;Application&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;/select&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/nav&gt;</p>
+
+<p class=MsoNormal>    &lt;/header&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;main class=&quot;container mx-auto p-4 sm:p-6
+lg:p-8&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;!-- Foundations Section --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;foundations&quot;
+class=&quot;content-section&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2 class=&quot;text-3xl font-bold mb-4&quot;
+style=&quot;color: #E07A5F;&quot;&gt;Foundations of Ethics&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-8 text-lg
+text-gray-600&quot;&gt;This section lays the groundwork for our study. We will
+define ethics, distinguish it from morality, and explore its main branches.
+Understanding these fundamentals is the first step toward developing a
+structured way of thinking about complex moral questions and building a
+coherent ethical framework.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;grid md:grid-cols-2 gap-8
+mb-12&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card p-6
+rounded-lg&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-2&quot;&gt;What is Ethics?&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p class=&quot;mb-4&quot;&gt;Derived
+from the Greek word &quot;ethos&quot; (character, custom, habit), ethics is the
+philosophical study of moral principles, values, and rules that govern human
+conduct. It is a systematic inquiry into how humans &lt;span
+class=&quot;font-bold&quot; style=&quot;color:
+#E07A5F;&quot;&gt;ought&lt;/span&gt; to act.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Why Study Ethics?&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                    &lt;ul class=&quot;list-disc list-inside
+space-y-2&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;li&gt;To develop critical
+thinking about moral issues.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                        &lt;li&gt;To understand different
+moral perspectives.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                        &lt;li&gt;To guide personal and
+professional decision-making.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                        &lt;li&gt;To foster a just and
+humane society.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                    &lt;/ul&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card p-6
+rounded-lg&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-2&quot;&gt;Ethics vs. Morality&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;space-y-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div&gt;</p>
+
+<p class=MsoNormal>                            &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Ethics: The Theory&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                            &lt;p&gt;The theoretical
+framework, principles, and concepts. It's the &lt;span
+class=&quot;italic&quot;&gt;science&lt;/span&gt; of morals. (e.g., Studying
+utilitarianism as a moral theory).&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div&gt;</p>
+
+<p class=MsoNormal>                            &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Morality: The Practice&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                            &lt;p&gt;The actual application
+of ethical principles. It's the &lt;span
+class=&quot;italic&quot;&gt;practice&lt;/span&gt; of morals. (e.g., Deciding
+whether to tell a lie in a specific situation).&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div&gt;</p>
+
+<p class=MsoNormal>                            &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Interrelation&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                            &lt;p&gt;Ethics provides the
+principles; morality is the living out of those principles.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            &lt;h3 class=&quot;text-2xl font-bold mb-4
+text-center&quot;&gt;Branches of Ethics&lt;/h3&gt;</p>
+
+<p class=MsoNormal>            &lt;div id=&quot;branches-container&quot;
+class=&quot;grid sm:grid-cols-1 md:grid-cols-3 gap-6&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;!-- Interactive cards will be inserted
+here by JS --&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mt-12 pt-8 border-t
+border-gray-200&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3 class=&quot;text-2xl font-bold
+mb-4&quot;&gt;Ethical Concept Explainer <span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;p class=&quot;mb-6
+text-gray-600&quot;&gt;Enter any ethical concept or term below, and get a quick
+explanation generated by AI. This feature uses the Gemini API to clarify
+complex ideas.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card p-6
+rounded-lg&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label
+for=&quot;concept-input&quot; class=&quot;block text-lg font-medium
+text-gray-700 mb-2&quot;&gt;Enter an ethical concept:&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;text&quot;
+id=&quot;concept-input&quot; class=&quot;mt-1 block w-full rounded-md
+border-gray-300 shadow-sm focus:border-indigo-300 focus:ring
+focus:ring-indigo-200 focus:ring-opacity-50 p-3&quot; placeholder=&quot;e.g.,
+Categorical Imperative, Eudaimonia, Moral Relativism&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-6
+text-center&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;button
+id=&quot;explain-concept-btn&quot; class=&quot;btn-primary py-2 px-6 rounded-md
+w-full sm:w-auto&quot;&gt;Explain Concept <span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;concept-output&quot;
+class=&quot;mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 min-h-[100px]
+flex items-center justify-center text-gray-700&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;Explanation will appear
+here.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+id=&quot;concept-loading-indicator&quot; class=&quot;hidden text-center mt-4
+text-gray-500&quot;&gt;</p>
+
+<p class=MsoNormal>                        Explaining... Please wait.</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- The Human Act Section --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;human-act&quot;
+class=&quot;content-section&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2 class=&quot;text-3xl font-bold mb-4&quot;
+style=&quot;color: #E07A5F;&quot;&gt;The Human Act&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-8 text-lg
+text-gray-600&quot;&gt;Ethics is concerned with actions for which we are
+morally responsible. This section defines the &quot;Human Act,&quot; distinguishing
+it from mere &quot;Acts of Man.&quot; We'll explore the essential elements that
+make an act a moral one and examine the various factors that can modify our
+accountability for our actions.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;card p-6 rounded-lg
+mb-8&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3 class=&quot;text-2xl font-bold mb-4
+text-center&quot;&gt;What is a Human Act?&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;p class=&quot;text-center
+mb-6&quot;&gt;Actions performed by a person knowingly, freely, and voluntarily.
+These are the actions for which a person is morally responsible.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;grid md:grid-cols-3
+gap-6 text-center&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;p-4 bg-green-100
+rounded-full h-16 w-16 mx-auto flex items-center justify-center
+mb-2&quot;&gt;&lt;span class=&quot;text-3xl&quot;&gt;<span style='font-family:
+"Segoe UI Emoji",sans-serif'>&#129504;</span>&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Knowledge&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;The agent is aware of what
+they are doing and its consequences.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;p-4 bg-blue-100
+rounded-full h-16 w-16 mx-auto flex items-center justify-center
+mb-2&quot;&gt;&lt;span class=&quot;text-3xl&quot;&gt;<span style='font-family:
+"Segoe UI Emoji",sans-serif'>&#128330;</span>&#65039;&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Freedom&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;The agent acts by their own
+free will, without coercion.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div class=&quot;p-4
+bg-purple-100 rounded-full h-16 w-16 mx-auto flex items-center justify-center
+mb-2&quot;&gt;&lt;span class=&quot;text-3xl&quot;&gt;<span style='font-family:
+"Segoe UI Emoji",sans-serif'>&#10004;</span>&#65039;&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;h4 class=&quot;font-bold
+text-lg&quot;&gt;Voluntariness&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;The agent intends the act
+and its consequences.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            &lt;h3 class=&quot;text-2xl font-bold
+mb-4&quot;&gt;Modifiers of Human Acts&lt;/h3&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-4&quot;&gt;Factors that can
+increase or decrease accountability for human acts.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;flex flex-wrap gap-2
+mb-4&quot; id=&quot;modifiers-tabs&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;!-- Tab buttons inserted here by JS
+--&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div id=&quot;modifiers-content&quot;
+class=&quot;card p-6 rounded-lg min-h-[200px]&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;!-- Content for modifiers will be
+inserted here by JS --&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Moral Norms Section --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;moral-norms&quot;
+class=&quot;content-section&quot;&gt;</p>
+
+<p class=MsoNormal>             &lt;h2 class=&quot;text-3xl font-bold
+mb-4&quot; style=&quot;color: #E07A5F;&quot;&gt;Moral Norms&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-8 text-lg
+text-gray-600&quot;&gt;How do we judge whether an act is good or bad? Moral
+norms are the standards we use to make these judgments. This section explores
+the two primary norms: Conscience (the internal, subjective guide) and Law (the
+external, objective guide). We'll delve into the different types of each to
+understand their roles in our moral lives.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;text-center mb-12&quot;&gt;</p>
+
+<p class=MsoNormal>                 &lt;h3 class=&quot;text-2xl font-bold
+mb-2&quot;&gt;The Two Primary Norms&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                 &lt;p&gt;The standards or criteria by which
+human acts are judged as morally good or bad.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;grid md:grid-cols-1
+lg:grid-cols-2 gap-12&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-4 text-center&quot;&gt;Types of Conscience&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                     &lt;div
+id=&quot;conscience-container&quot; class=&quot;grid grid-cols-2 md:grid-cols-3
+gap-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;!-- Conscience cards here --&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-4 text-center&quot;&gt;Types of Law&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;law-container&quot;
+class=&quot;grid grid-cols-2 gap-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;!-- Law cards here --&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Ethical Theories Section --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;theories&quot;
+class=&quot;content-section&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2 class=&quot;text-3xl font-bold mb-4&quot;
+style=&quot;color: #E07A5F;&quot;&gt;Major Ethical Theories&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-8 text-lg
+text-gray-600&quot;&gt;Philosophers have developed various frameworks to help
+us understand and evaluate moral actions. This section introduces three major
+ethical theories. Each offers a different lens for determining what is right:
+one focuses on character, one on duty, and one on consequences. Explore them to
+see how they provide different paths to moral reasoning.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;flex justify-center
+flex-wrap gap-4 mb-8&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;button id=&quot;btn-virtue&quot;
+class=&quot;btn-primary py-2 px-4 rounded-full&quot;&gt;Virtue
+Ethics&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;button id=&quot;btn-deontology&quot;
+class=&quot;btn-primary py-2 px-4 rounded-full&quot;&gt;Deontology&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;button id=&quot;btn-utilitarianism&quot;
+class=&quot;btn-primary py-2 px-4
+rounded-full&quot;&gt;Utilitarianism&lt;/button&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;grid lg:grid-cols-2 gap-8
+items-center&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card p-6
+rounded-lg&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 id=&quot;theory-title&quot;
+class=&quot;text-2xl font-bold mb-2&quot;&gt;&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p class=&quot;text-sm font-medium
+text-gray-500 mb-4&quot; id=&quot;theory-proponent&quot;&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+id=&quot;theory-details&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;flex flex-col
+items-center justify-center&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;p class=&quot;text-lg font-semibold
+mb-2&quot;&gt;Core Focus&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;chart-container&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;canvas id=&quot;theoryChart&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>        </p>
+
+<p class=MsoNormal>        &lt;!-- Application Section --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;application&quot;
+class=&quot;content-section&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2 class=&quot;text-3xl font-bold mb-4&quot;
+style=&quot;color: #E07A5F;&quot;&gt;Application of Ethics&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p class=&quot;mb-8 text-lg
+text-gray-600&quot;&gt;Ethics is not just a theoretical exercise; it is about
+living a moral life. This final section brings theory into practice. We will
+explore key Filipino values that shape the moral landscape in the Philippines
+and walk through a structured process for making sound ethical decisions when
+faced with real-world dilemmas.&lt;/p&gt;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            &lt;div class=&quot;grid lg:grid-cols-2
+gap-12&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-4&quot;&gt;Ethics in the Philippine Context&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+id=&quot;filipino-values-container&quot; class=&quot;space-y-3&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;!-- Filipino Values inserted
+here --&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 class=&quot;text-2xl font-bold
+mb-4&quot;&gt;Ethical Decision-Making Process&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+id=&quot;decision-making-container&quot; class=&quot;space-y-2&quot;&gt;</p>
+
+<p class=MsoNormal>                         &lt;!-- Decision making steps
+inserted here --&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mt-12 pt-8 border-t border-gray-200&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3 class=&quot;text-2xl font-bold
+mb-4&quot;&gt;Ethical Dilemma Solver <span style='font-family:"Segoe UI Emoji",sans-serif'>&#10024;</span>&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;p class=&quot;mb-6
+text-gray-600&quot;&gt;Input an ethical dilemma below, select an ethical
+theory, and let the AI analyze it from that perspective. This feature uses the
+Gemini API to provide insights.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                </p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card p-6
+rounded-lg&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label
+for=&quot;dilemma-input&quot; class=&quot;block text-lg font-medium
+text-gray-700 mb-2&quot;&gt;Describe your ethical dilemma:&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;textarea
+id=&quot;dilemma-input&quot; rows=&quot;6&quot; class=&quot;mt-1 block w-full
+rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring
+focus:ring-indigo-200 focus:ring-opacity-50 p-3&quot; placeholder=&quot;e.g.,
+You witness a friend cheating on an exam. Do you report
+them?&quot;&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;mb-6 flex flex-col
+sm:flex-row items-center gap-4&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label
+for=&quot;theory-select&quot; class=&quot;block text-lg font-medium
+text-gray-700&quot;&gt;Analyze using:&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;select
+id=&quot;theory-select&quot; class=&quot;mt-1 block w-full sm:w-auto rounded-md
+border-gray-300 shadow-sm focus:border-indigo-300 focus:ring
+focus:ring-indigo-200 focus:ring-opacity-50 p-2&quot;&gt;</p>
+
+<p class=MsoNormal>                            &lt;option value=&quot;Virtue
+Ethics&quot;&gt;Virtue Ethics&lt;/option&gt;</p>
+
+<p class=MsoNormal>                            &lt;option
+value=&quot;Deontology&quot;&gt;Deontology&lt;/option&gt;</p>
+
+<p class=MsoNormal>                            &lt;option
+value=&quot;Utilitarianism&quot;&gt;Utilitarianism&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;/select&gt;</p>
+
+<p class=MsoNormal>                        &lt;button
+id=&quot;analyze-dilemma-btn&quot; class=&quot;btn-primary py-2 px-6 rounded-md
+mt-4 sm:mt-0 w-full sm:w-auto&quot;&gt;Analyze Dilemma <span style='font-family:
+"Segoe UI Emoji",sans-serif'>&#10024;</span>&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;dilemma-output&quot;
+class=&quot;mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 min-h-[150px]
+flex items-center justify-center text-gray-700&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;Your analysis will appear
+here.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div id=&quot;loading-indicator&quot;
+class=&quot;hidden text-center mt-4 text-gray-500&quot;&gt;</p>
+
+<p class=MsoNormal>                        Analyzing... Please wait.</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>    &lt;/main&gt;</p>
+
+<p class=MsoNormal>&lt;script&gt;</p>
+
+<p class=MsoNormal>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    const data = {</p>
+
+<p class=MsoNormal>        branches: [</p>
+
+<p class=MsoNormal>            { name: 'Meta-ethics', description: 'Examines the
+nature and origin of moral judgments. Questions: What is goodness? Do moral
+truths exist?' },</p>
+
+<p class=MsoNormal>            { name: 'Normative Ethics', description:
+'Develops theories about what is right and wrong. Questions: What makes an
+action right? What are our moral duties?' },</p>
+
+<p class=MsoNormal>            { name: 'Applied Ethics', description: 'Applies
+ethical theories to specific, practical moral issues like bioethics, business
+ethics, and environmental ethics.' }</p>
+
+<p class=MsoNormal>        ],</p>
+
+<p class=MsoNormal>        modifiers: {</p>
+
+<p class=MsoNormal>            'Ignorance': `</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Ignorance: Lack of knowledge.&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;ul class=&quot;list-disc list-inside
+space-y-2&quot;&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;li&gt;&lt;strong&gt;Vincible:&lt;/strong&gt; Can be overcome through
+diligence. Reduces voluntariness.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;li&gt;&lt;strong&gt;Invincible:&lt;/strong&gt; Cannot be overcome even with
+diligence. Eliminates voluntariness.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;/ul&gt;`,</p>
+
+<p class=MsoNormal>            'Passion': `</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Passion/Concupiscence: Strong emotions.&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;ul class=&quot;list-disc list-inside
+space-y-2&quot;&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;li&gt;&lt;strong&gt;Antecedent:&lt;/strong&gt; Arises before the will can
+act. Reduces voluntariness.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                    &lt;li&gt;&lt;strong&gt;Consequent:&lt;/strong&gt;
+Deliberately aroused or fostered. Increases voluntariness.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;/ul&gt;`,</p>
+
+<p class=MsoNormal>            'Fear': `</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Fear: Disturbance of the mind caused by an impending
+danger.&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Actions done from fear, while
+voluntary, can have reduced moral responsibility. Grave fear can sometimes
+exempt an action from being a sin.&lt;/p&gt;`,</p>
+
+<p class=MsoNormal>            'Violence': `</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Violence: External physical force compelling a person to act
+against their will.&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;If the violence is irresistible, it
+removes voluntariness from the act.&lt;/p&gt;`,</p>
+
+<p class=MsoNormal>            'Habit': `</p>
+
+<p class=MsoNormal>                &lt;h4 class=&quot;font-bold text-lg
+mb-2&quot;&gt;Habit: A lasting readiness and facility, born of frequently
+repeated acts.&lt;/h4&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Actions from deliberately acquired
+bad habits are voluntary. Actions from habits one is trying to overcome have
+reduced voluntariness.&lt;/p&gt;`</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        conscienceTypes: [</p>
+
+<p class=MsoNormal>            { name: 'Correct/True', description: 'Judges
+good as good, evil as evil.' },</p>
+
+<p class=MsoNormal>            { name: 'Erroneous/False', description: 'Judges
+good as evil, or evil as good.' },</p>
+
+<p class=MsoNormal>            { name: 'Lax', description: 'Judges serious sins
+as light, or no sin at all.' },</p>
+
+<p class=MsoNormal>            { name: 'Scrupulous', description: 'Judges light
+sins as grave, or sees sin where there is none.' },</p>
+
+<p class=MsoNormal>            { name: 'Certain', description: 'Acts without
+fear of error.' },</p>
+
+<p class=MsoNormal>            { name: 'Doubtful', description: 'Hesitates to
+make a judgment.' },</p>
+
+<p class=MsoNormal>        ],</p>
+
+<p class=MsoNormal>        lawTypes: [</p>
+
+<p class=MsoNormal>             { name: 'Eternal Law', description: &quot;God's
+wise and providential plan for the universe. The ultimate source of all
+law.&quot; },</p>
+
+<p class=MsoNormal>             { name: 'Natural Law', description: &quot;The
+eternal law as it is known by human reason. Universal, immutable, and
+obligatory.&quot; },</p>
+
+<p class=MsoNormal>             { name: 'Divine Positive Law', description:
+&quot;Laws revealed by God (e.g., Ten Commandments).&quot; },</p>
+
+<p class=MsoNormal>             { name: 'Human Positive Law', description:
+&quot;Laws enacted by human authority. Must be consistent with natural
+law.&quot; },</p>
+
+<p class=MsoNormal>        ],</p>
+
+<p class=MsoNormal>        theories: {</p>
+
+<p class=MsoNormal>            virtue: {</p>
+
+<p class=MsoNormal>                title: 'Virtue Ethics',</p>
+
+<p class=MsoNormal>                proponent: 'Proponent: Aristotle',</p>
+
+<p class=MsoNormal>                details: `&lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; Focuses on
+the character of the moral agent rather than the action itself.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Key Concept (Virtue):&lt;/strong&gt; A
+moral excellence or disposition to act in a morally good way.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Ultimate Goal
+(Eudaimonia):&lt;/strong&gt; &quot;Flourishing&quot; or &quot;living
+well,&quot; achieved through a lifetime of virtuous living.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p&gt;&lt;strong&gt;The Golden
+Mean:&lt;/strong&gt; Virtues lie between two vices of excess and deficiency
+(e.g., Courage is the mean between cowardice and recklessness).&lt;/p&gt;`,</p>
+
+<p class=MsoNormal>                chartData: [100, 0, 0],</p>
+
+<p class=MsoNormal>                chartLabel: &quot;Character&quot;</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            deontology: {</p>
+
+<p class=MsoNormal>                title: 'Deontology',</p>
+
+<p class=MsoNormal>                proponent: 'Proponent: Immanuel Kant',</p>
+
+<p class=MsoNormal>                details: `&lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; Morality is
+based on duty and rules, regardless of consequences.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Key Concept (Categorical
+Imperative):&lt;/strong&gt; Universal moral laws that apply to everyone,
+everywhere.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;ul class=&quot;list-disc
+list-inside ml-4 mb-2&quot;&gt;</p>
+
+<p class=MsoNormal>                           
+&lt;li&gt;&lt;strong&gt;Universalizability:&lt;/strong&gt; Act only on
+principles you could will to be universal laws.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                            &lt;li&gt;&lt;strong&gt;Humanity
+as an End:&lt;/strong&gt; Never treat people merely as a means to an
+end.&lt;/li&gt;</p>
+
+<p class=MsoNormal>                          &lt;/ul&gt;</p>
+
+<p class=MsoNormal>                         
+&lt;p&gt;&lt;strong&gt;Emphasis:&lt;/strong&gt; Moral actions are those done
+&lt;em&gt;from&lt;/em&gt; duty.&lt;/p&gt;`,</p>
+
+<p class=MsoNormal>                chartData: [0, 100, 0],</p>
+
+<p class=MsoNormal>                chartLabel: &quot;Duty&quot;</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            utilitarianism: {</p>
+
+<p class=MsoNormal>                title: 'Utilitarianism',</p>
+
+<p class=MsoNormal>                proponent: 'Proponents: Jeremy Bentham, John
+Stuart Mill',</p>
+
+<p class=MsoNormal>                details: `&lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Core Idea:&lt;/strong&gt; The morality
+of an action is determined by its consequences.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p class=&quot;mb-2&quot;&gt;&lt;strong&gt;Key
+Concept (Greatest Happiness Principle):&lt;/strong&gt; Actions are right if
+they promote the greatest happiness for the greatest number of
+people.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                          &lt;p
+class=&quot;mb-2&quot;&gt;&lt;strong&gt;Focus:&lt;/strong&gt; Maximizing
+overall happiness or pleasure and minimizing suffering.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                         
+&lt;p&gt;&lt;strong&gt;Types:&lt;/strong&gt; Includes Act Utilitarianism
+(judges individual acts) and Rule Utilitarianism (judges moral
+rules).&lt;/p&gt;`,</p>
+
+<p class=MsoNormal>                chartData: [0, 0, 100],</p>
+
+<p class=MsoNormal>                chartLabel: &quot;Consequences&quot;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        filipinoValues: [</p>
+
+<p class=MsoNormal>            { name: 'Pakikipagkapwa-tao', description:
+'Treating others with respect and as fellow human beings; shared identity.' },</p>
+
+<p class=MsoNormal>            { name: 'Family Orientation', description: 'A
+deep sense of belonging and obligation to one\'s family.' },</p>
+
+<p class=MsoNormal>            { name: 'Hiya', description: 'A sense of shame,
+propriety, or &quot;face.&quot; Can motivate proper behavior.' },</p>
+
+<p class=MsoNormal>            { name: 'Utang na Loob', description: 'A debt of
+gratitude; an internal obligation to repay a favor.' },</p>
+
+<p class=MsoNormal>            { name: 'Pagtitiwala sa Diyos', description:
+'Faith in God, which often underpins moral viewpoints.' }</p>
+
+<p class=MsoNormal>        ],</p>
+
+<p class=MsoNormal>        decisionMakingSteps: [</p>
+
+<p class=MsoNormal>            'Identify the Ethical Issue',</p>
+
+<p class=MsoNormal>            'Gather Relevant Information',</p>
+
+<p class=MsoNormal>            'Identify Stakeholders',</p>
+
+<p class=MsoNormal>            'Evaluate Alternatives',</p>
+
+<p class=MsoNormal>            'Apply Ethical Theories/Principles',</p>
+
+<p class=MsoNormal>            'Make a Decision',</p>
+
+<p class=MsoNormal>            'Act and Reflect'</p>
+
+<p class=MsoNormal>        ]</p>
+
+<p class=MsoNormal>    };</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    const sections =
+document.querySelectorAll('.content-section');</p>
+
+<p class=MsoNormal>    const navButtons =
+document.querySelectorAll('.nav-button');</p>
+
+<p class=MsoNormal>    const mobileNav = document.getElementById('mobile-nav');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function switchSection(targetId) {</p>
+
+<p class=MsoNormal>        sections.forEach(section =&gt; {</p>
+
+<p class=MsoNormal>            section.classList.toggle('active', section.id
+=== targetId);</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>        navButtons.forEach(button =&gt; {</p>
+
+<p class=MsoNormal>            button.classList.toggle('active',
+button.dataset.target === targetId);</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>        if (mobileNav.value !== targetId) {</p>
+
+<p class=MsoNormal>            mobileNav.value = targetId;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    navButtons.forEach(button =&gt; {</p>
+
+<p class=MsoNormal>        button.addEventListener('click', () =&gt;
+switchSection(button.dataset.target));</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>    </p>
+
+<p class=MsoNormal>    mobileNav.addEventListener('change', (e) =&gt;
+switchSection(e.target.value));</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Initialize Foundations</p>
+
+<p class=MsoNormal>    const branchesContainer =
+document.getElementById('branches-container');</p>
+
+<p class=MsoNormal>    data.branches.forEach(branch =&gt; {</p>
+
+<p class=MsoNormal>        const div = document.createElement('div');</p>
+
+<p class=MsoNormal>        div.className = 'card p-6 rounded-lg text-center';</p>
+
+<p class=MsoNormal>        div.innerHTML = `&lt;h4 class=&quot;text-xl
+font-bold
+mb-2&quot;&gt;${branch.name}&lt;/h4&gt;&lt;p&gt;${branch.description}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>        branchesContainer.appendChild(div);</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Initialize Human Act</p>
+
+<p class=MsoNormal>    const modifiersTabs =
+document.getElementById('modifiers-tabs');</p>
+
+<p class=MsoNormal>    const modifiersContent =
+document.getElementById('modifiers-content');</p>
+
+<p class=MsoNormal>    Object.keys(data.modifiers).forEach((key, index) =&gt; {</p>
+
+<p class=MsoNormal>        const button = document.createElement('button');</p>
+
+<p class=MsoNormal>        button.className = 'tab-button py-2 px-4
+rounded-full text-sm font-medium transition';</p>
+
+<p class=MsoNormal>        button.textContent = key;</p>
+
+<p class=MsoNormal>        button.addEventListener('click', () =&gt; {</p>
+
+<p class=MsoNormal>            document.querySelectorAll('.tab-button').forEach(btn
+=&gt; btn.classList.remove('active'));</p>
+
+<p class=MsoNormal>            button.classList.add('active');</p>
+
+<p class=MsoNormal>            modifiersContent.innerHTML =
+data.modifiers[key];</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>        modifiersTabs.appendChild(button);</p>
+
+<p class=MsoNormal>        if (index === 0) button.click();</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Initialize Moral Norms</p>
+
+<p class=MsoNormal>    const conscienceContainer =
+document.getElementById('conscience-container');</p>
+
+<p class=MsoNormal>    data.conscienceTypes.forEach(c =&gt; {</p>
+
+<p class=MsoNormal>        const card = document.createElement('div');</p>
+
+<p class=MsoNormal>        card.className = 'card p-4 rounded-lg text-center
+h-28 flex flex-col justify-center';</p>
+
+<p class=MsoNormal>        card.innerHTML = `&lt;h5
+class=&quot;font-bold&quot;&gt;${c.name}&lt;/h5&gt;&lt;p
+class=&quot;text-xs&quot;&gt;${c.description}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>        conscienceContainer.appendChild(card);</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>    </p>
+
+<p class=MsoNormal>    const lawContainer =
+document.getElementById('law-container');</p>
+
+<p class=MsoNormal>    data.lawTypes.forEach(l =&gt; {</p>
+
+<p class=MsoNormal>        const card = document.createElement('div');</p>
+
+<p class=MsoNormal>        card.className = 'card p-4 rounded-lg text-center
+h-32 flex flex-col justify-center';</p>
+
+<p class=MsoNormal>        card.innerHTML = `&lt;h5
+class=&quot;font-bold&quot;&gt;${l.name}&lt;/h5&gt;&lt;p
+class=&quot;text-xs&quot;&gt;${l.description}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>        lawContainer.appendChild(card);</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Initialize Ethical Theories</p>
+
+<p class=MsoNormal>    const theoryTitle =
+document.getElementById('theory-title');</p>
+
+<p class=MsoNormal>    const theoryProponent =
+document.getElementById('theory-proponent');</p>
+
+<p class=MsoNormal>    const theoryDetails =
+document.getElementById('theory-details');</p>
+
+<p class=MsoNormal>    const ctx =
+document.getElementById('theoryChart').getContext('2d');</p>
+
+<p class=MsoNormal>    let theoryChart = new Chart(ctx, {</p>
+
+<p class=MsoNormal>        type: 'doughnut',</p>
+
+<p class=MsoNormal>        data: {</p>
+
+<p class=MsoNormal>            labels: ['Character', 'Duty', 'Consequences'],</p>
+
+<p class=MsoNormal>            datasets: [{</p>
+
+<p class=MsoNormal>                data: [],</p>
+
+<p class=MsoNormal>                backgroundColor: ['#E07A5F', '#3D405B',
+'#81B29A'],</p>
+
+<p class=MsoNormal>                borderWidth: 0</p>
+
+<p class=MsoNormal>            }]</p>
+
+<p class=MsoNormal>        },</p>
+
+<p class=MsoNormal>        options: {</p>
+
+<p class=MsoNormal>            responsive: true,</p>
+
+<p class=MsoNormal>            maintainAspectRatio: false,</p>
+
+<p class=MsoNormal>            plugins: {</p>
+
+<p class=MsoNormal>                legend: { display: true, position: 'bottom'
+},</p>
+
+<p class=MsoNormal>                tooltip: {</p>
+
+<p class=MsoNormal>                    callbacks: {</p>
+
+<p class=MsoNormal>                        label: function(context) {</p>
+
+<p class=MsoNormal>                            return `${context.label}:
+${context.raw}%`;</p>
+
+<p class=MsoNormal>                        }</p>
+
+<p class=MsoNormal>                    }</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            },</p>
+
+<p class=MsoNormal>            cutout: '70%'</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    function updateTheory(theoryKey) {</p>
+
+<p class=MsoNormal>        const theory = data.theories[theoryKey];</p>
+
+<p class=MsoNormal>        theoryTitle.textContent = theory.title;</p>
+
+<p class=MsoNormal>        theoryProponent.textContent = theory.proponent;</p>
+
+<p class=MsoNormal>        theoryDetails.innerHTML = theory.details;</p>
+
+<p class=MsoNormal>        theoryChart.data.datasets[0].data =
+theory.chartData;</p>
+
+<p class=MsoNormal>        theoryChart.update();</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>   
+document.getElementById('btn-virtue').addEventListener('click', () =&gt;
+updateTheory('virtue'));</p>
+
+<p class=MsoNormal>    document.getElementById('btn-deontology').addEventListener('click',
+() =&gt; updateTheory('deontology'));</p>
+
+<p class=MsoNormal>   
+document.getElementById('btn-utilitarianism').addEventListener('click', ()
+=&gt; updateTheory('utilitarianism'));</p>
+
+<p class=MsoNormal>    </p>
+
+<p class=MsoNormal>    // Initialize Application</p>
+
+<p class=MsoNormal>    const filipinoValuesContainer = document.getElementById('filipino-values-container');</p>
+
+<p class=MsoNormal>    data.filipinoValues.forEach(value =&gt; {</p>
+
+<p class=MsoNormal>        const div = document.createElement('div');</p>
+
+<p class=MsoNormal>        div.className = 'card p-4 rounded-lg';</p>
+
+<p class=MsoNormal>        div.innerHTML = `&lt;h4
+class=&quot;font-bold&quot;&gt;${value.name}&lt;/h4&gt;&lt;p&gt;${value.description}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>        filipinoValuesContainer.appendChild(div);</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    const decisionMakingContainer =
+document.getElementById('decision-making-container');</p>
+
+<p class=MsoNormal>    data.decisionMakingSteps.forEach((step, index) =&gt; {</p>
+
+<p class=MsoNormal>        const div = document.createElement('div');</p>
+
+<p class=MsoNormal>        div.className = 'flex items-start';</p>
+
+<p class=MsoNormal>        div.innerHTML = `&lt;div class=&quot;flex-shrink-0
+bg-gray-200 text-gray-700 rounded-full h-8 w-8 flex items-center justify-center
+font-bold mr-4&quot;&gt;${index + 1}&lt;/div&gt;&lt;p
+class=&quot;py-1&quot;&gt;${step}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>        decisionMakingContainer.appendChild(div);</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>    </p>
+
+<p class=MsoNormal>    // Gemini API Integration for Ethical Dilemma Solver</p>
+
+<p class=MsoNormal>    const dilemmaInput = document.getElementById('dilemma-input');</p>
+
+<p class=MsoNormal>    const theorySelect =
+document.getElementById('theory-select');</p>
+
+<p class=MsoNormal>    const analyzeDilemmaBtn =
+document.getElementById('analyze-dilemma-btn');</p>
+
+<p class=MsoNormal>    const dilemmaOutput =
+document.getElementById('dilemma-output');</p>
+
+<p class=MsoNormal>    const loadingIndicator = document.getElementById('loading-indicator');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    analyzeDilemmaBtn.addEventListener('click', async ()
+=&gt; {</p>
+
+<p class=MsoNormal>        const dilemma = dilemmaInput.value.trim();</p>
+
+<p class=MsoNormal>        const selectedTheory = theorySelect.value;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        if (!dilemma) {</p>
+
+<p class=MsoNormal>            dilemmaOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;Please enter an ethical dilemma.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>            return;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        loadingIndicator.classList.remove('hidden');</p>
+
+<p class=MsoNormal>        dilemmaOutput.innerHTML = ''; </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        try {</p>
+
+<p class=MsoNormal>            let chatHistory = [];</p>
+
+<p class=MsoNormal>            const prompt = `Analyze the following ethical
+dilemma from the perspective of ${selectedTheory}. Explain how this theory
+would approach the situation and what action it might suggest.</p>
+
+<p class=MsoNormal>            Dilemma: ${dilemma}`;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            chatHistory.push({ role: &quot;user&quot;,
+parts: [{ text: prompt }] });</p>
+
+<p class=MsoNormal>            const payload = { contents: chatHistory };</p>
+
+<p class=MsoNormal>            const apiKey = &quot;&quot;; </p>
+
+<p class=MsoNormal>            const apiUrl =
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            const response = await fetch(apiUrl, {</p>
+
+<p class=MsoNormal>                method: 'POST',</p>
+
+<p class=MsoNormal>                headers: { 'Content-Type':
+'application/json' },</p>
+
+<p class=MsoNormal>                body: JSON.stringify(payload)</p>
+
+<p class=MsoNormal>            });</p>
+
+<p class=MsoNormal>            const result = await response.json();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            if (result.candidates &amp;&amp;
+result.candidates.length &gt; 0 &amp;&amp;</p>
+
+<p class=MsoNormal>                result.candidates[0].content &amp;&amp;
+result.candidates[0].content.parts &amp;&amp;</p>
+
+<p class=MsoNormal>                result.candidates[0].content.parts.length
+&gt; 0) {</p>
+
+<p class=MsoNormal>                const text =
+result.candidates[0].content.parts[0].text;</p>
+
+<p class=MsoNormal>                dilemmaOutput.innerHTML =
+`&lt;p&gt;${text}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                dilemmaOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;Could not get a response. Please try
+again.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        } catch (error) {</p>
+
+<p class=MsoNormal>            console.error('Error calling Gemini API:',
+error);</p>
+
+<p class=MsoNormal>            dilemmaOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;An error occurred while analyzing the
+dilemma. Please check your network connection or try again later.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>        } finally {</p>
+
+<p class=MsoNormal>            loadingIndicator.classList.add('hidden');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Gemini API Integration for Ethical Concept Explainer</p>
+
+<p class=MsoNormal>    const conceptInput =
+document.getElementById('concept-input');</p>
+
+<p class=MsoNormal>    const explainConceptBtn =
+document.getElementById('explain-concept-btn');</p>
+
+<p class=MsoNormal>    const conceptOutput = document.getElementById('concept-output');</p>
+
+<p class=MsoNormal>    const conceptLoadingIndicator =
+document.getElementById('concept-loading-indicator');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    explainConceptBtn.addEventListener('click', async ()
+=&gt; {</p>
+
+<p class=MsoNormal>        const concept = conceptInput.value.trim();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        if (!concept) {</p>
+
+<p class=MsoNormal>            conceptOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;Please enter an ethical concept to
+explain.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>            return;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        conceptLoadingIndicator.classList.remove('hidden');</p>
+
+<p class=MsoNormal>        conceptOutput.innerHTML = ''; </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        try {</p>
+
+<p class=MsoNormal>            let chatHistory = [];</p>
+
+<p class=MsoNormal>            const prompt = `Explain the ethical concept of
+&quot;${concept}&quot; clearly and concisely, suitable for a 1st-year college
+ethics student. Focus on its core meaning and significance.`;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            chatHistory.push({ role: &quot;user&quot;,
+parts: [{ text: prompt }] });</p>
+
+<p class=MsoNormal>            const payload = { contents: chatHistory };</p>
+
+<p class=MsoNormal>            const apiKey = &quot;&quot;; </p>
+
+<p class=MsoNormal>            const apiUrl =
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            const response = await fetch(apiUrl, {</p>
+
+<p class=MsoNormal>                method: 'POST',</p>
+
+<p class=MsoNormal>                headers: { 'Content-Type':
+'application/json' },</p>
+
+<p class=MsoNormal>                body: JSON.stringify(payload)</p>
+
+<p class=MsoNormal>            });</p>
+
+<p class=MsoNormal>            const result = await response.json();</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            if (result.candidates &amp;&amp;
+result.candidates.length &gt; 0 &amp;&amp;</p>
+
+<p class=MsoNormal>                result.candidates[0].content &amp;&amp; result.candidates[0].content.parts
+&amp;&amp;</p>
+
+<p class=MsoNormal>                result.candidates[0].content.parts.length
+&gt; 0) {</p>
+
+<p class=MsoNormal>                const text =
+result.candidates[0].content.parts[0].text;</p>
+
+<p class=MsoNormal>                conceptOutput.innerHTML =
+`&lt;p&gt;${text}&lt;/p&gt;`;</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                conceptOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;Could not get an explanation. Please try
+again.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        } catch (error) {</p>
+
+<p class=MsoNormal>            console.error('Error calling Gemini API for
+concept explanation:', error);</p>
+
+<p class=MsoNormal>            conceptOutput.innerHTML = '&lt;p
+class=&quot;text-red-500&quot;&gt;An error occurred while explaining the
+concept. Please check your network connection or try again later.&lt;/p&gt;';</p>
+
+<p class=MsoNormal>        } finally {</p>
+
+<p class=MsoNormal>            conceptLoadingIndicator.classList.add('hidden');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    // Set initial state</p>
+
+<p class=MsoNormal>    switchSection('foundations');</p>
+
+<p class=MsoNormal>    updateTheory('virtue');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
